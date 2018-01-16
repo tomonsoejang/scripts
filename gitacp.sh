@@ -1,0 +1,9 @@
+COMMIT_MESSAGE=$1    #$1 gives the first argument
+if [ -z "$COMMIT_MESSAGE" ]; then
+	echo -e "\e[31mError : \e[39mMissing \"Message\" for commit"
+	echo -e "\e[32mSyntax : \e[39mgitacp \"COMMIT_MESSAGE\""
+	exit
+fi
+git add .
+git commit -m "$COMMIT_MESSAGE"
+git push origin master

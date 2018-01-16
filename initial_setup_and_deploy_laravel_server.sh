@@ -1,15 +1,17 @@
 # php7.0-mysql : required by mysql
 # php7.0-fpm : required by nginx
 
-sudo apt-get install composer php7.0-zip php7.0-xml php7.0-curl php7.0-mbstring php7.0-mysql php7.0-bcmath php7.0-fpm mysql-server
+sudo apt-get update
+sudo apt-get install composer php7.0-zip php7.0-xml php7.0-curl php7.0-mbstring php7.0-mysql php7.0-bcmath php7.0-fpm
+sudo apt-get install sendmail mysql-server nginx
 
 #INSTALL LARAVEL
 #*********************************************
-$ composer global require laravel/installer
+composer global require laravel/installer
 
 #add composer path to .bashrc
 #********************************************
-echo "#LINES ADDED BY TOMONSO">~/.bashrc
+echo "#LINES ADDED BY TOMONSO">> ~/.bashrc
 echo "COMPOSER=$HOME/.config/composer/vendor/bin" >> ~/.bashrc
 echo "PATH+=$PATH:$COMPOSER" >> ~/.bashrc
 

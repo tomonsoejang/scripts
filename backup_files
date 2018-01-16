@@ -1,0 +1,18 @@
+#!/bin/bash
+FILENAME=$1
+if [ -z "$FILENAME" ];then
+	echo -e "\e[31mError : \e[39mMissing \"FILENAME\""
+        echo -e "\e[32mSyntax : \e[39mgitacp \"FILENAME\" \"DESTINATION\""
+        exit
+fi
+
+DESTINATION=$2
+
+if [ -z "$DESTINATION" ];then	
+	echo -e "\e[31mError : \e[39mMissing \"DESTINATION\""
+        echo -e "\e[32mSyntax : \e[39mgitacp \"FILENAME\" \"DESTINATION\""
+        exit
+fi
+	
+NEWFILENAME=$FILENAME-`date -I`
+cp -r $FILENAME $DESTINATION/$NEWFILENAME

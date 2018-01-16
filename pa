@@ -1,0 +1,28 @@
+#!/bin/bash
+
+OPTION=$1
+if [ "$OPTION" ]; then
+        case "$OPTION" in
+		rl)
+			COMMAND="route:list"
+			;;
+
+		rlg)
+			COMMAND="route:list | grep"
+			;;
+		mf)
+			COMMAND="migrate:fresh"
+			;;
+		mfs)
+			COMMAND="migrate:fresh --seed"
+			;;
+		*)
+			COMMAND=$OPTION
+			;;
+
+	esac
+	
+fi
+X="php artisan $COMMAND ${@:2}"
+echo $X
+$X

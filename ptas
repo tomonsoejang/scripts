@@ -1,0 +1,3 @@
+#!/bin/bash
+COMMAND="migrate:fresh --seed"
+php artisan $COMMAND
