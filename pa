@@ -16,12 +16,13 @@ if [ "$OPTION" ]; then
 		mfs)
 			COMMAND="migrate:fresh --seed"
 			;;
+		mrfs)
+			COMMAND="migrate:refresh --seed"
+			;;
 		*)
 			COMMAND=$OPTION
 			;;
-
 	esac
-	
 fi
 X="php artisan $COMMAND ${@:2}"
 echo $X

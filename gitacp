@@ -1,3 +1,5 @@
+#!/bin/bash
+
 COMMIT_MESSAGE=$1    #$1 gives the first argument
 if [ -z "$COMMIT_MESSAGE" ]; then
 	echo -e "\e[31mError : \e[39mMissing \"Message\" for commit"
