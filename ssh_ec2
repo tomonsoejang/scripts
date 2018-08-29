@@ -9,7 +9,10 @@ fi
 if [ "$SITE_NAME" ]; then
 	case "$SITE_NAME" in
 		bee)
-			SSH_URL="cbdeveloper@ec2-52-90-58-244.compute-1.amazonaws.com"
+			SSH_URL="cbdeveloper@34.194.64.239"
+			;;
+		michmach)
+			SSH_URL="${SSH_MICHMACH}"
 			;;
 		*)
 			echo "No Site with this name is available..."
@@ -17,5 +20,6 @@ if [ "$SITE_NAME" ]; then
 	esac
 fi
 
+echo $SSH_URL
 ssh $SSH_URL
 
